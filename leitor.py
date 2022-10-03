@@ -25,7 +25,7 @@ while True:
         nova = (a + ponto + b + car + c)
         proc.append(nova)
 
-    novoarq = input('Nome: ')
-    with open ("C:\\Users\\Niceias\\Desktop\\leitura\\" + novoarq + '.txt', 'w') as arquivo:
+    #novoarq = input('Nome: ')
+    with open ("C:\\Users\\Niceias\\Desktop\\limpos\\" + doc + '.txt', 'w') as arquivo:
         for valor in proc:
             arquivo.write(valor.strip() + '\n')
