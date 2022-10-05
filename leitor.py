@@ -7,7 +7,7 @@ print("Regular (1)" "\n" 'Adaptada (2)' '\n'"Olimpiada (3)" '\n' "Olimpiada Adap
 gab = input('Informe o modelo de Gabarito: ')
 gab = int(gab)
 
-if(gab > 4):
+if(gab > 5):
    sys.exit("Programa encerrado por digitar um valor invalido!!")
 else:
     caminho = input("digite o caminho do arquivo: ")
@@ -98,3 +98,51 @@ else:
                     arquivo.write(valor.strip() + '\n')
             os.system('cls')
 
+        elif (gab == 5):
+            for item in leitura:
+                asterisco = item[19:30]
+
+                if (asterisco[10] == "*"):
+
+                    esp = asterisco.replace("*", ";ESP;")
+
+                    a = item[0:20]
+                    b = item[20:30]
+                    c = item[33:]
+                    car = ';A;'
+                    caradp = 'A;'
+                    ponto = ';'
+                    nova = (a + ponto + esp + caradp + c)
+                    proc.append(nova)
+
+
+                    with open(destino + "\\" + doc + '.txt', 'w') as arquivo:
+                        for valor in proc:
+                            arquivo.write(valor.strip() + '\n')
+                    os.system('cls')
+
+                else:
+
+
+
+                    a = item[0:20]
+                    b = item[20:30]
+                    c = item[30:33]
+                    d = item[34:]
+                    car = ';A;'
+                    caradp = 'A;'
+                    ponto = ';'
+                    #ing = ';ING'
+                    nova = (a + ponto + b + ponto + c + car + d)
+                    proc.append(nova)
+
+                    with open(destino + "\\" + doc + '.txt', 'w') as arquivo:
+                        for valor in proc:
+                            arquivo.write(valor.strip() + '\n')
+                    os.system('cls')
+
+
+                    with open(destino + "\\" + doc + '.txt', 'w') as arquivo:
+                        for valor in proc:
+                            arquivo.write(valor.strip() + '\n')
+                    os.system('cls')
