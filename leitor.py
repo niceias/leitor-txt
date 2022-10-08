@@ -35,6 +35,8 @@ while True:
                 file_pacth = f'{caminho}\{file}'
                 with open(file_pacth, 'r') as arq:
                     leitura = arq.readlines()
+            else:
+                continue
 
             lista = []
             nlista = []
