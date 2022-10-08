@@ -30,7 +30,7 @@ while True:
         destino = caminho
 
         for file in os.listdir():
-
+            deletar = file
             if file.endswith(".txt"):
                 file_pacth = f'{caminho}\{file}'
                 with open(file_pacth, 'r') as arq:
@@ -51,9 +51,10 @@ while True:
                     nova = item[0:19] + ";" + item[19:29] + ";A;" + item[29:]
                     proc.append(nova)
 
-                with open(destino + "\\" + file +  '.txt', 'w') as arquivo:
+                with open(destino + "\\" + file + '.txt', 'w') as arquivo:
                     for valor in proc:
                         arquivo.write(valor.strip() + '\n')
+                os.remove(deletar)
                 os.system('cls')
 
             # TODO: GABARITO REGULAR ADAPTADO
@@ -63,9 +64,11 @@ while True:
                     nova = item[0:19] + "A;" + item[19:29] + ";A;" + item[29:]
                     proc.append(nova)
 
-                with open(destino + "\\" + file +  '.txt', 'w') as arquivo:
+                with open(destino + "\\" + file +  '_txt', 'w') as arquivo:
                     for valor in proc:
                         arquivo.write(valor.strip() + '\n')
+
+                os.remove(file)
                 os.system('cls')
 
             # TODO: GABARITO DE OLIMPIADA
@@ -78,6 +81,7 @@ while True:
                 with open(destino + "\\" + file + '.txt', 'w') as arquivo:
                     for valor in proc:
                         arquivo.write(valor.strip() + '\n')
+                os.remove(file)
                 os.system('cls')
 
             # TODO: GABARITO DE OLIMPIADA ADAPTADA
@@ -90,11 +94,12 @@ while True:
                 with open(destino + "\\" + file +  '.txt', 'w') as arquivo:
                     for valor in proc:
                         arquivo.write(valor.strip() + '\n')
+                os.remove(file)
                 os.system('cls')
 
             # TODO: GABARITO DE LINGUAS ESTRANGEIRAS
             elif (gab == 5):
-                for item in leitura:
+                 for item in leitura:
 
                     asterisco = item[0:30]
 
@@ -107,8 +112,11 @@ while True:
                         asterisco = item[0:19] + ";" + item[19:29] + ";" + item[29:32] + ";" + "A;" + item[32:]
                         proc.append(asterisco)
 
-                    with open(destino + "\\" + file + '.txt', 'w') as arquivo:
-                        for valor in proc:
-                            arquivo.write(valor.strip() + '\n')
+                 with open(destino + "\\" + file + '.txt', 'w') as arquivo:
+                    for valor in proc:
+                        arquivo.write(valor.strip() + '\n')
+
+                    os.remove(deletar)
+                    print(deletar)
                     os.system('cls')
 
